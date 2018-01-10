@@ -1,0 +1,21 @@
+{
+  "name": "react-native-flowable-gridview",
+  "version": "0.1.0",
+  "description": "A flowable grid view based on React Native's View component.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh",
+    "dev": "node bin/dev.js && cd example && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuechinahb/react-native-flowable-gridview.git"
+  },
+  "keywords": [
+    "React Native",
+    "flowable",
+    "gridview"
+  ],
+  "author": "Evan <xuechinahb@gmail.com>",
+  "license": "MIT"
+}
