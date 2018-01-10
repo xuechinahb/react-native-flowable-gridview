@@ -1,11 +1,12 @@
-import React, {PureComponent, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
     View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
-export default class FlowableGridView extends PureComponent {
+export default class FlowableGridView extends Component {
 
     constructor(props){
         super(props);
@@ -23,19 +24,15 @@ export default class FlowableGridView extends PureComponent {
     }
     static defaultProps = {
         columnSpace: 0,
-        rowSpace: 10 ,
-        resetItemFlag: false,
+        rowSpace: 0 ,
     }
 
     static calculateFillCount(sum, gridWidth, itemWidth,  columnSpace, style ) {//计算需要填充的元素个数
-      const paddingLeft = style.paddingLeft || 0 ;
-      const paddingRight = style.paddingRight || 0;
+        const paddingLeft = style&&style.paddingLeft || 0 ;
+        const paddingRight = style&&style.paddingRight || 0;
         let colunmCount =  Math.floor( (gridWidth -  paddingLeft - paddingRight  + columnSpace) / (itemWidth + columnSpace)) ;
         let result =  sum - Math.floor(sum / colunmCount) * colunmCount ;
-        console.log('-----calculateFillCount----gridWidth=' + gridWidth);
-
         return colunmCount - result;
-
     }
 
     render() {
@@ -49,7 +46,6 @@ export default class FlowableGridView extends PureComponent {
           items = dataSource.map( (data, index)=>{
               let keyVal = keyExtractor&&keyExtractor(data, index);
               keyVal = keyVal || index;
-              console.log(`keyVal=${keyVal}`);
               return (
                   <View key={keyVal} style={{marginLeft: columnSpace, marginTop: rowSpace, width: itemWidth}}>
                       {
@@ -85,7 +81,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: 'white',
+        backgroundColor: 'transparent',
         justifyContent: 'space-between',
         // alignItems: 'flex-start'
     }
