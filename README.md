@@ -1,7 +1,7 @@
 # react-native-flowable-gridview
 A flowable view container, based on View component. Auto layout with different screen sizes.  
      
-It does't reuse cell views. if your data is large, it will be poor efficiency. Using FlatList or List component instead. 
+It does't reuse cell views. if your data is large, it will be poor efficiency. Using FlatList or List component instead. 
 
 # Example
 
