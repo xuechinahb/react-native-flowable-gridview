@@ -6,12 +6,8 @@ It does't reuse cell views. if your data is large, it will be poor efficiency. U
 # Example
 
 <div align="center">
-<img height= "400px" src="preview/ios-portrait.png" />
-<img width= "400px" src="preview/ios-landscape.png" />
-</div>
-<div align="center">
-<img height= "400px" src="preview/android-portrait.png" />
-<img width= "400px" src="preview/android-landscape.png" />
+<img height= "550px" src="preview/android-portrait.png" />
+<img width= "600px" src="preview/ios-landscape.png" />
 </div>
 
 # Installation
